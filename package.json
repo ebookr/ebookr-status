@@ -1,0 +1,36 @@
+{
+  "name": "ebookr-status",
+  "version": "0.1.0",
+  "description": "A simple ebookr-extension that displays status of document",
+  "main": "index.js",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "ebookr": "^0.4.1",
+    "growl": "^1.8.1",
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-mocha-test": "^0.12.1",
+    "load-grunt-config": "^0.14.0",
+    "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.21.5"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ebookr/ebookr-status.git"
+  },
+  "keywords": [
+    "ebookr"
+  ],
+  "author": "Arne Hassel <arne.hassel@gmail.com> (http://icanhasweb.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ebookr/ebookr-status/issues"
+  },
+  "homepage": "https://github.com/ebookr/ebookr-status"
+}
