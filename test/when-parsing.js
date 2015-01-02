@@ -11,22 +11,23 @@ describe('When parsing', function () {
 	describe('With metadata given', function () {
 		beforeEach(function () {
 			ebookr.metadata.set('status', {
-				1: 'foo',
-				2: 'bar'
+				0: 'foo',
+				1: 'bar'
 			});
 		});
 
 		it('should let valid tags parse', function () {
 			expect(function () {
+				ebookr.parse('<status state="0" />');
+				ebookr.parse('<status state="0" />');
 				ebookr.parse('<status state="1" />');
-				ebookr.parse('<status state="2" />');
-			}).not.to.throw;
+			}).not.to.throw();
 		});
 
 		it('should throw error on invalid tags', function () {
 			expect(function () {
-				ebookr.parse('<status state="3" />');
-			}).to.throw(/Invalid state given: 3/)
+				ebookr.parse('<status state="2" />');
+			}).to.throw(/Invalid state given: 2/)
 		});
 	});
 
