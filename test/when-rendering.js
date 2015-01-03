@@ -18,6 +18,10 @@ describe('When rendering', function () {
 	});
 
 	it('should support multiple tags', function () {
-		expect(ebookr.parse('<status state="1" /> <status state="1" />').render()).to.equal('Status: foo (1) Status: foo (1)');
+		expect(ebookr.parse('<status state="1" />\
+			<status state="1" />\
+			<status state="2" />').render()).to.equal('Status: foo (1)\
+			Status: foo (1)\
+			Status: bar (2)');
 	});
 });
