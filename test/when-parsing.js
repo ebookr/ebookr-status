@@ -7,15 +7,12 @@ var chai = require('chai'),
 chai.use(sinonChai);
 
 describe('When parsing', function () {
-	var ebookr, console;
+	var ebookr;
 
 	beforeEach(function () {
 		ebookr = require('ebookr').new();
-		console = { info: sinon.spy() };
-		mockrequire('../lib/status', {
-			'consoleplusplus': console,
-			'util': require('util')
-		})(ebookr);
+		require('../lib/status')(ebookr);
+		console.info = sinon.spy();
 	});
 
 	describe('With metadata given', function () {
