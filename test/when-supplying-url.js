@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-describe('When supplying label', function () {
+describe('When supplying url', function () {
 	var ebookr;
 
 	beforeEach(function () {
