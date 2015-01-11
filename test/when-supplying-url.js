@@ -13,6 +13,6 @@ describe('When supplying label', function () {
 	});
 
 	it('should return rendered text', function () {
-		expect(ebookr.parse('<status state="1" />').render()).to.equal('Status: [foo (1)](http://test.com/#1)');
+		expect(ebookr.parse('<status state="1" />').render()).to.equal('[foo (1)](http://test.com/#1)');
 	});
 });

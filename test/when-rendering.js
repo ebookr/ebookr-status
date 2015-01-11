@@ -20,16 +20,16 @@ describe('When rendering', function () {
 	});
 
 	it('should return rendered text', function () {
-		expect(ebookr.parse('<status state="1" />').render()).to.equal('Status: foo (1)');
-		expect(ebookr.parse('<status state="2" />').render()).to.equal('Status: bar (2)');
+		expect(ebookr.parse('<status state="1" />').render()).to.equal('foo (1)');
+		expect(ebookr.parse('<status state="2" />').render()).to.equal('bar (2)');
 	});
 
 	it('should support multiple tags', function () {
 		expect(ebookr.parse('<status state="1" />\
 			<status state="1" />\
-			<status state="2" />').render()).to.equal('Status: foo (1)\
-			Status: foo (1)\
-			Status: bar (2)');
+			<status state="2" />').render()).to.equal('foo (1)\
+			foo (1)\
+			bar (2)');
 	});
 
 	it('should support verbose mode', function () {
